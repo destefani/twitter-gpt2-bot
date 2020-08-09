@@ -41,4 +41,4 @@ headers_cols = list(columns)
 df = pd.DataFrame(tweets_data, columns=headers_cols)
 
 # Export data
-df.to_csv("tweets.csv")
+df.to_csv("data/tweets.csv")
