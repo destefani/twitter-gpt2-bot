@@ -1,4 +1,5 @@
 import json
+from datetime import date
 import tweepy
 import pandas as pd
 
@@ -41,4 +42,5 @@ headers_cols = list(columns)
 df = pd.DataFrame(tweets_data, columns=headers_cols)
 
 # Export data
-df.to_csv("data/tweets.csv")
+today = date.today().isoformat()
+df.to_csv(f"data/tweets{today}.csv")
